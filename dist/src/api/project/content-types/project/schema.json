@@ -1,0 +1,54 @@
+{
+    "kind": "collectionType",
+    "collectionName": "projects",
+    "info": {
+        "singularName": "project",
+        "pluralName": "projects",
+        "displayName": "Project"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "blocks",
+            "required": true
+        },
+        "technologies": {
+            "type": "json",
+            "required": true
+        },
+        "image": {
+            "allowedTypes": [
+                "images",
+                "files"
+            ],
+            "type": "media",
+            "multiple": false,
+            "required": true
+        },
+        "githubUrl": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "default": "WEB",
+            "required": true
+        },
+        "playstoreUrl": {
+            "type": "string"
+        },
+        "appstoreUrl": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "title",
+            "required": true
+        }
+    }
+}
